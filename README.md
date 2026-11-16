@@ -1,6 +1,6 @@
 <div align="center">
 
-# 안녕하세요, 임준서입니다 👋
+# 안녕하세요, 임준서입니다
 
 **게임 시스템을 직접 만들고, 쓰고 싶은 도구를 직접 만드는 개발자**
 
@@ -12,17 +12,17 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 
 ---
 
-## 🙋 About Me
+## About Me
 
-- 🎮 **Unity / C#** 로 턴제 전략, 미니게임, VR·AR 같은 **게임 시스템**을 설계하고 구현합니다.
-- 🤖 게임 플레이 데이터를 분석해 **Claude API** 로 복기 리포트를 써 주는 기능을 만들었습니다.
-- 📱 **Flutter** 로 매일 쓰는 생활비 앱을 만들고, Android 홈 화면 위젯은 **Kotlin** 으로 직접 붙입니다.
-- 🌐 **바닐라 JavaScript** 로 브라우저 게임과 웹 도구를 만들고, **GitHub Actions → Pages** 로 직접 배포합니다.
-- 🤝 팀 프로젝트에서 브랜치 단위로 기능을 나눠 개발하고 머지 충돌을 줄이는 구조를 고민합니다.
+- Unity / C#로 턴제 전략, 미니게임, VR·AR 같은 게임 시스템을 설계하고 구현합니다.
+- 게임 플레이 데이터를 분석해 Claude API로 복기 리포트를 써 주는 기능을 만들었습니다.
+- Flutter로 매일 쓰는 생활비 앱을 만들고, Android 홈 화면 위젯은 Kotlin으로 직접 붙입니다.
+- 바닐라 JavaScript로 브라우저 게임과 웹 도구를 만들고, GitHub Actions → Pages로 직접 배포합니다.
+- 팀 프로젝트에서 브랜치 단위로 기능을 나눠 개발하고 머지 충돌을 줄이는 구조를 고민합니다.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Game
 ![Unity](https://img.shields.io/badge/Unity_6-000000?style=flat-square&logo=unity&logoColor=white)
@@ -59,14 +59,14 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 
 ---
 
-## 🚀 Projects
+## Projects
 
-### ♟️ Promotion · 2026 한림대 캡스톤 (3인 팀)
+### Promotion · 2026 한림대 캡스톤 (3인 팀)
 > Unity 6 · C# · URP 2D · Input System · Claude API · Cloudflare Workers · Firestore  ·  [Repository](https://github.com/GitSHP/2026_HallymCapStone)
 
 **로그라이크 + 타워 디펜스 + 체스**를 섞은 게임입니다. 체스 기물을 배치해 적 웨이브를 막으며 스테이지를 넘기고, 마지막에는 체스 대결로 런을 마무리합니다. 맵 · 상점 · 아티팩트 · 튜토리얼로 한 판의 흐름을 구성합니다.
 
-#### 🤖 AI 복기 리포트
+#### AI 복기 리포트
 런이 끝나면 **AI가 그 판의 플레이를 분석한 리포트**를 써 줍니다.
 
 ```
@@ -88,7 +88,7 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 - 위협받는 기물 경고(다음 적 턴 미리 계산), 승격 화면, 튜토리얼
 - 베타 빌드 배포, 팀 브랜치 구조에 맞춘 저장소 정리
 
-### 🐿️ DTR · 돈토리
+### DTR · 돈토리
 > Flutter · Dart · Riverpod · Drift(SQLite) · Kotlin  ·  [Repository](https://github.com/imjunseoo/DTR)
 
 다음 수입일까지 **오늘 얼마를 쓸 수 있는지** 보여주는 Android 생활비 앱입니다.
@@ -99,7 +99,7 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 - Kotlin으로 만든 **홈 화면 위젯** (남은 예산 · HP 표시, 바로 지출 입력)
 - 기기 내 SQLite 저장, JSON 백업 · 복원, 예산 · DB · 백업 단위 테스트
 
-### 🥽 2026-1 VR·AR
+### 2026-1 VR·AR
 > Unity · C#  ·  [Repository](https://github.com/imjunseoo/2026-1-VR-AR)
 
 3학년 1학기 **가상현실과 증강현실** 수업 Unity 프로젝트 모음입니다.
@@ -107,7 +107,7 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 - **Escape Room** · **MyArProject** · **Tower Defence for AR**
 - 2GB 제한을 넘는 원본 프로젝트를 Release에 분할 업로드하고, SHA-256으로 무결성 검증
 
-### 🧪 PokéParty Lab
+### PokéParty Lab
 > JavaScript · Node.js · GitHub Actions  ·  [Live](https://imjunseoo.github.io/pokeparty-lab/) · [Repository](https://github.com/imjunseoo/pokeparty-lab)
 
 보드게임 「포켓몬 파티!」를 위한 **상성 계산기 · 파티 추천 웹앱**입니다.
@@ -117,7 +117,7 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 - 하드코딩 없이 PokeAPI · Smogon 사용률 데이터를 Node.js 스크립트로 가공
 - `node --test` 테스트 → GitHub Actions로 데이터 빌드 · Pages 자동 배포
 
-### 🚀 SpaceFighter
+### SpaceFighter
 > JavaScript · Canvas · Firebase  ·  [Play](https://imjunseoo.github.io/SpaceFighter/) · [Repository](https://github.com/imjunseoo/SpaceFighter)
 
 브라우저에서 바로 하는 **우주 슈팅 액션 게임**입니다.
@@ -125,12 +125,12 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 - HTML5 Canvas 기반 게임 엔진 · 엔티티 · 오디오 직접 구현
 - Firebase Auth 로그인 + Firestore **온라인 리더보드**
 
-### 📚 2026-1 Semester
+### 2026-1 Semester
 > WebGL · JavaScript · Unity  ·  [Repository](https://github.com/imjunseoo/2026_1Semester)
 
 2026년 1학기 수업 실습 기록입니다. WebGL 컴퓨터그래픽스(도형 · 변환 · 애니메이션 · 텍스처) 실습과 Unity 과제를 담고 있습니다.
 
-### 🦊 Raon D-Team · 여우의 모험 (2022)
+### Raon D-Team · 여우의 모험 (2022)
 > Unity · C#  ·  [Repository](https://github.com/imjunseoo/Raon_DTeam)
 
 동아리 SW 전시회 2인 팀 프로젝트입니다. 미니게임을 모아 점수를 겨루는 게임으로, **장애물 피해 달리기** 모드와 캐릭터 이동 · 달리기 · 점프 · 중력 처리를 맡았습니다.

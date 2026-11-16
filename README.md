@@ -15,6 +15,7 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 ## 🙋 About Me
 
 - 🎮 **Unity / C#** 로 턴제 전략, 미니게임, VR·AR 같은 **게임 시스템**을 설계하고 구현합니다.
+- 🤖 게임 플레이 데이터를 분석해 **Claude API** 로 복기 리포트를 써 주는 기능을 만들었습니다.
 - 📱 **Flutter** 로 매일 쓰는 생활비 앱을 만들고, Android 홈 화면 위젯은 **Kotlin** 으로 직접 붙입니다.
 - 🌐 **바닐라 JavaScript** 로 브라우저 게임과 웹 도구를 만들고, **GitHub Actions → Pages** 로 직접 배포합니다.
 - 🤝 팀 프로젝트에서 브랜치 단위로 기능을 나눠 개발하고 머지 충돌을 줄이는 구조를 고민합니다.
@@ -45,7 +46,9 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 ![WebGL](https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
 
-### Backend · Deploy
+### AI · Backend · Deploy
+![Claude API](https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflareworkers&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase_Auth_·_Firestore-DD2C00?style=flat-square&logo=firebase&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white)
@@ -58,16 +61,32 @@ Computer Science @ Hallym University · Unity Game Dev · Web
 
 ## 🚀 Projects
 
-### ♟️ 2026 Hallym Capstone · 팀 프로젝트
-> Unity 6 · C# · URP 2D · Input System  ·  [Repository](https://github.com/GitSHP/2026_HallymCapStone)
+### ♟️ Promotion · 2026 한림대 캡스톤 (3인 팀)
+> Unity 6 · C# · URP 2D · Input System · Claude API · Cloudflare Workers · Firestore  ·  [Repository](https://github.com/GitSHP/2026_HallymCapStone)
 
-체스판 위에 기물을 배치해 몰려오는 적 웨이브를 막는 **턴제 전략 게임**입니다. 맵 · 상점 · 아티팩트 · 튜토리얼로 한 판의 흐름을 구성합니다.
+**로그라이크 + 타워 디펜스 + 체스**를 섞은 게임입니다. 체스 기물을 배치해 적 웨이브를 막으며 스테이지를 넘기고, 마지막에는 체스 대결로 런을 마무리합니다. 맵 · 상점 · 아티팩트 · 튜토리얼로 한 판의 흐름을 구성합니다.
+
+#### 🤖 AI 복기 리포트
+런이 끝나면 **AI가 그 판의 플레이를 분석한 리포트**를 써 줍니다.
+
+```
+행동 기록 → 규칙 기반 분석 → 학습자 모델 → AI 작성 → 검증 후 표시
+```
+
+1. **행동 기록** · 기물 드래그, 턴 전환, 소환, 잡기, 승격, 체크 같은 게임 이벤트를 수집합니다. 기존 코드는 고치지 않고 이벤트만 듣는 구조입니다.
+2. **규칙 기반 분석** · 게임 안에서 실수와 지표를 계산합니다. (잡기 기회 놓침, 기물 손실, 외통수 허용 · 놓침 등)
+3. **학습자 모델** · 체스 개념별 숙련도를 추정합니다.
+4. **AI 작성** · Cloudflare Workers 서버가 분석 결과만 Claude API에 넘겨 리포트 문장을 받습니다. API 키는 서버에만 둡니다.
+5. **검증 후 표시** · 분석 결과에 없는 내용은 걸러 내고, 체스판 장면에 **둔 수와 더 좋았던 수를 화살표로** 함께 보여 줍니다.
+
+리포트는 **기록소**에 쌓여 승률과 자주 하는 실수를 한눈에 볼 수 있습니다.
 
 **담당 작업**
 - 체스 보드, 기물 이동 규칙, 드래그 앤 드롭 배치 (MVP)
 - 턴 루프, 적 웨이브, 배치 페이즈, 상점, 개발자 도구
-- 튜토리얼 보기 / 건너뛰기 선택
-- 팀 브랜치 구조에 맞춘 폴더 정리, 머지 충돌을 줄이는 저장소 설정
+- AI 복기 리포트 전체 (행동 기록 · 분석 · 리포트 서버 · 기록소 화면)
+- 위협받는 기물 경고(다음 적 턴 미리 계산), 승격 화면, 튜토리얼
+- 베타 빌드 배포, 팀 브랜치 구조에 맞춘 저장소 정리
 
 ### 🐿️ DTR · 돈토리
 > Flutter · Dart · Riverpod · Drift(SQLite) · Kotlin  ·  [Repository](https://github.com/imjunseoo/DTR)
